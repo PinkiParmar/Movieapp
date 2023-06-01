@@ -10,6 +10,7 @@ import Profile from './Components/Profile';
 import Header from './Common/Header';
 import Footer from './Common/Footer';
 import MainLayout from './Common/Main_Layout';
+import Logout from './Components/Logout';
 
 export default function App(){
   return(
@@ -26,6 +27,8 @@ export default function App(){
       <Route path="/upcoming" element={<MainLayout Mainpage={<Upcoming/>}/>}></Route>
       <Route path="/profile" element={<MainLayout Mainpage={<Profile/>}/>}></Route>
       <Route path="/footer" element={<Footer/>}></Route>
+      <Route path="/logout" element={<Logout/>}></Route>
+
       </Routes>
     </BrowserRouter>
   
