@@ -5,7 +5,7 @@ export default function Header(){
     return(<>
     <div className="header">
         <div className="headerLeft">
-            <Link to="/"><img className="rounded" src="img_logo.png" /></Link>
+            <Link to="/home"><img className="rounded" src="img_logo.png" /></Link>
             <Link to="/popular" style={{textDecoration:'none'}}><span>Popular</span></Link>
             <Link to="/top_rated" style={{textDecoration:'none'}} ><span>Top rated</span></Link>
             <Link to="/upcoming" style={{textDecoration:'none'}} ><span>Upcoming</span></Link>
@@ -15,7 +15,7 @@ export default function Header(){
             </div>
     </div>
     
-                <form action="">
+     <form action="">
                     <div className="header">
                         <input type="text" className="header" placeholder="Search for movie"/>
                         <div className="header">

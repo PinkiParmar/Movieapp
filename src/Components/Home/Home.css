@@ -1,0 +1,9 @@
+.Home{
+    background-color:black;
+    color:white;
+    font-family: sans-serif;
+}
+ .slider-img {
+    height: 500px !important;
+    width: 1000px !important;
+} 
