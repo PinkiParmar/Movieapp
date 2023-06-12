@@ -27,36 +27,18 @@ export default function Home(){
         <Carousel
         showThumbs={false}
         autoplay={true}
-        transitionTime={1}
+        transitionTime={3}
         infiniteLoop={true}
         showStatus={false}>
             {
                 data.map((movie, index)=>{
                     return (<>
-                    <img src={movie.image} className='slider-img'/>
+                    <img src={movie.image} className='slider-img' />
                     <a>{movie.movie_name}</a>
                     </>)
                 })
                 
-                // data.map((movie, index)=>{
-                //     return (<>
-                //         <div className="posterImage">
-                //             <img src={movie.image} className='slider-img' />
-                //         </div>
-                //         <div className="posterImage__title">
-                //             <div>
-                //                 <label className="Home" for="home page">Movie name</label>
-                //                 <p className="Home">{movie.movie_name}</p></div>
-                //             </div>
-
-                //             <p className="Home">{movie.category}</p>
-                //             <p className="Home">{movie.movie_type}</p>
-                //             <p className="Home">{movie.director}</p>
-                //             <p className="Home">{movie.start_cast}</p>
-                //             <p className="Home">{movie.Rating}</p>
-                    
-                //     </>)
-                // })
+                
             }
 
             

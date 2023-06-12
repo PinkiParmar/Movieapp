@@ -1,6 +1,8 @@
 import React from "react";
 import './Header.css';
 import {Link} from 'react-router-dom';
+import{FaBars,FaTimes} from 'react-icons/fa';
+
 export default function Header(){
     return(<>
     <div className="header">
@@ -11,6 +13,7 @@ export default function Header(){
             <Link to="/upcoming" style={{textDecoration:'none'}} ><span>Upcoming</span></Link>
             <Link to="/logout" style={{textDecoration:'none'}} ><span>Logout</span></Link>
             <Link to="/profile" style={{textDecoration:'none'}} ><img src="img_avtar2.png" alt="Profile" className="rounded-circle"/><span>My Profile</span></Link>
+            
             
             </div>
     </div>
