@@ -10,6 +10,15 @@ export default function Home(){
   const getData = async () => {
     const { data } = await axios.get("http://localhost:3003/movies");
     console.log('movie',data);
+    let tempArray = []
+    data.map((movie, index)=>{
+        tempArray.push({
+            label : "image"+index,
+            alt : "image"+index,
+            url : movie.image,
+        })
+    })
+    console.log(tempArray);
     setData(data);
   };
   useEffect(() => {
