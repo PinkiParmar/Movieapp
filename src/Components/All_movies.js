@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
-import "./Popular.css"
+import "./All_movies.css"
 import { Link } from "react-router-dom"
 
 
- export default function Top_rated(){
+ export default function All_movies(){
     
     const [data, setData] = useState([]);
     const getData = async () => {
-      const { data } = await axios.get("http://localhost:3003/movies-top-rated");
+      const { data } = await axios.get("http://localhost:3003/movies");
       console.log('movie',data);
       setData(data);
     };

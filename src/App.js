@@ -11,6 +11,7 @@ import Header from './Common/Header';
 import Footer from './Common/Footer';
 import MainLayout from './Common/Main_Layout';
 import Logout from './Components/Logout';
+import All_movies from './Components/All_movies';
 
 export default function App(){
   return(
@@ -18,7 +19,7 @@ export default function App(){
     <BrowserRouter>
       <Routes>
       <Route path="/home" element={<MainLayout Mainpage={<Home/>}/>}/>
-      
+      <Route path="/all_movies" element={<MainLayout Mainpage={<All_movies/>}/>}/>
       <Route path="/header" element={<MainLayout Mainpage={<Home/>}/>}></Route>
       <Route path="/" element={<Login/>}></Route>
       <Route path="/register" element={<Register/>}></Route>
@@ -28,10 +29,8 @@ export default function App(){
       <Route path="/profile" element={<MainLayout Mainpage={<Profile/>}/>}></Route>
       <Route path="/footer" element={<Footer/>}></Route>
       <Route path="/logout" element={<Logout/>}></Route>
-
       </Routes>
     </BrowserRouter>
-  
     </>
   );
 }

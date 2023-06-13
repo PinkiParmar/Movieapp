@@ -8,6 +8,7 @@ export default function Header(){
     <div className="header">
         <div className="headerLeft">
             <Link to="/home"><img className="rounded" src="img_logo.png" /></Link>
+            <Link to="/all_movies" style={{textDecoration:'none'}}><span>All movies</span></Link>
             <Link to="/popular" style={{textDecoration:'none'}}><span>Popular</span></Link>
             <Link to="/top_rated" style={{textDecoration:'none'}} ><span>Top rated</span></Link>
             <Link to="/upcoming" style={{textDecoration:'none'}} ><span>Upcoming</span></Link>

@@ -7,4 +7,20 @@
     height: 600px !important;
     width: 600px !important;
     
-} 
+} .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .carousel-container {
+    max-width: 750px;
+  }
+  /* .carousel-inner{
+     height: 300px;
+}                                            
+.item, img{
+    height: 100% !important;
+    width:  100% !important;
+    border: 1px solid red;
+} */

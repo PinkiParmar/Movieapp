@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
     
     const [data, setData] = useState([]);
     const getData = async () => {
-      const { data } = await axios.get("http://localhost:3003/movies");
+      const { data } = await axios.get("http://localhost:3003/movies-popular");
       console.log('movie',data);
       setData(data);
     };
