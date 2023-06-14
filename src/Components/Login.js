@@ -18,7 +18,8 @@ function submit(e){
     },
     })
     .then((res) => {
-      console.log(res);
+      console.log(res.data);
+      localStorage.setItem('token', JSON.stringify(res.token));
       if (res.status===200){
         alert(res.data.msg);
       } else {
@@ -38,15 +39,15 @@ const handle=(e)=>{
 }
     return(
         <>
-         <form className="container col-lg-4 mt-5" onSubmit={(e)=>submit(e)}>
-  <div class="imgcontainer">
+         <form className="col-lg-4 mt-5 " onSubmit={(e)=>submit(e)}>
+<div class="imgcontainer">
     <img src="img_avtar2.png" alt="Avatar" class="avatar"/>
   </div>
   <div class="container">
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" onChange={(e)=>handle(e)} value={data.email}  required/>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" onChange={(e)=>handle(e)} value={data.email} required/>
+    <input type="text" placeholder="Enter Email" name="email" onChange={(e)=>handle(e)}   required/>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" onChange={(e)=>handle(e)}  required/>
     <button type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"/> Remember me
