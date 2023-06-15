@@ -9,7 +9,12 @@ import { Link } from "react-router-dom"
     
     const [data, setData] = useState([]);
     const getData = async () => {
-      const { data } = await axios.get("http://localhost:3003/movies-popular");
+        var token=JSON.parse(localStorage.getItem('token'));
+        console.log(token);
+      const { data } = await axios.get("http://localhost:3003/movies-popular",{headers: {
+        "Authorization": `Bearer ${token}`, 
+        "Content-type": "application/json",
+     }},);
       console.log('movie',data);
       setData(data);
     };

@@ -79,10 +79,11 @@ export default function Register()
     <input type="text" placeholder="Enter mobile" name="mobile" onChange={(e)=>handle(e)} value={data.mobile} required/>
     <label for="password"><b>Password</b></label>
     <input type="text" placeholder="Enter password" name="password" onChange={(e)=>handle(e)} value={data.password} required/>
-    <button type="submit">Register</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"/> Remember me
-    </label>
+    <label for="password"><b>Cpassword</b></label>
+    <input type="text" placeholder="confirm password" name="cpassword" required/>
+
+    <button t0="/" type="submit">Register</button>
+   
     </div>
   <div class="container" style={{backgroundColor:'#f1f1f1'}}>
     <button type="button" class="cancelbtn">Cancel</button>

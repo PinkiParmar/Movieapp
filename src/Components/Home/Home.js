@@ -6,7 +6,12 @@ import "./Home.css";
 export default function Home() {
     const [data, setData] = useState([]);
     const getData = async () => {
-      const { data } = await axios.get("http://localhost:3003/movies-home");
+      var token=JSON.parse(localStorage.getItem('token'));
+        console.log(token);
+      const { data } = await axios.get("http://localhost:3003/movies-home",{headers: {
+        "Authorization": `Bearer ${token}`, 
+        "Content-type": "application/json",
+     }},);
       console.log('movie',data);
       let tempArray = []
       data.map((movie, index)=>{
