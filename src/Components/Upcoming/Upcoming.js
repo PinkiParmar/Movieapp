@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
-import "./Popular.css"
+import "./Upcoming.css"
 import { Link } from "react-router-dom"
 
 

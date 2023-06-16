@@ -1,17 +1,18 @@
 import React from 'react';
 import { BrowserRouter,Routes, Route} from "react-router-dom";
 import Home from './Components/Home/Home';
-import Login from './Components/Login';
-import Register from './Components/Register';
-import Popular from './Components/Popular';
-import Top_rated from './Components/Top_rated';
-import Upcoming from './Components/Upcoming';
-import Profile from './Components/Profile';
+
+import Register from './Components/Register/Register';
+import Popular from './Components/Popular/Popular';
+import Top_rated from './Components/Top_rated/Top_rated';
+import Upcoming from './Components/Upcoming/Upcoming';
+import Profile from './Components/Profile/Profile';
 import Header from './Common/Header';
 import Footer from './Common/Footer';
 import MainLayout from './Common/Main_Layout';
-import Logout from './Components/Logout';
-import All_movies from './Components/All_movies';
+// import Logout from './Components/Logout/Logout';
+import All_movies from './Components/All_movies/All_movies';
+import Login from './Components/Login/Login';
 
 export default function App(){
   return(
@@ -28,7 +29,7 @@ export default function App(){
       <Route path="/upcoming" element={<MainLayout Mainpage={<Upcoming/>}/>}></Route>
       <Route path="/profile" element={<MainLayout Mainpage={<Profile/>}/>}></Route>
       <Route path="/footer" element={<Footer/>}></Route>
-      <Route path="/logout" element={<Logout/>}></Route>
+      {/* <Route path="/logout" element={<Logout/>}></Route> */}
       </Routes>
     </BrowserRouter>
     </>
