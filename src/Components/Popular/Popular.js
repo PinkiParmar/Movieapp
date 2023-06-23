@@ -21,7 +21,6 @@ import { Link } from "react-router-dom"
     useEffect(() => {
       getData();
     }, []);
-
    return(<>
         <div className="container-fluid pt-5 container">
             <div className="row px-xl-5 pb-3 container">

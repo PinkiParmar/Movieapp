@@ -1,10 +1,11 @@
 import React,{useState} from "react";
-//import {Link} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 export default function Register()
 {
+  const navigate = useNavigate();
     const [data, setData] = useState({
       first_name:"",
       last_name:"",
@@ -29,7 +30,9 @@ export default function Register()
       .then((res) => {
         console.log(res);
         if (res.status===200){
-          alert(res.data.message);
+          //alert(res.data.message);
+          localStorage.setItem('message', JSON.stringify(res.data.message));
+          navigate('/', { replace: true });
         } else {
           alert("Error in API request or network")
         }
@@ -96,9 +99,7 @@ export default function Register()
     <input type="text" placeholder="Enter password" name="password" onChange={(e)=>handle(e)} value={data.password} required/>
     </div>
     </div>
-
     <button type="submit">Register</button>
-   
 </div>
   <div class="container" style={{backgroundColor:'#f1f1f1'}}>
     <button type="button" class="cancelbtn">Cancel</button>

@@ -37,7 +37,7 @@ export default function Home() {
   function handleChange(index) {
     setCurrentIndex(index);
   }
-  return (
+  return(
     <div className="App">
       <Carousel
         showArrows={true}

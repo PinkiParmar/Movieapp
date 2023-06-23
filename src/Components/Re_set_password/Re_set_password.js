@@ -56,10 +56,7 @@ export default function Re_set_password() {
           <label for="password" className="text" onChange={(e) => handle(e)} required><b>New Password</b></label>
           <input type="text" className="text" placeholder="Enter new password" name="new-password"  required />
         </div>
-        <div className="container">
-          <label for="password" className="text"><b>Cpassword</b></label>
-          <input type="text" className="text" placeholder="confirm password" name="email"  required />
-        </div>
+       
         <div className="container" style={{ backgroundColor: '#f1f1f1' }}>
           <button type="submit" className="cancelbtn">Submit</button>
         </div>
