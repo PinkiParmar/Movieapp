@@ -38,7 +38,7 @@ export default function Home() {
     setCurrentIndex(index);
   }
   return(
-    <div className="App">
+    <div className="App bg-dark text-white">
       <Carousel
         showArrows={true}
         autoPlay={true}

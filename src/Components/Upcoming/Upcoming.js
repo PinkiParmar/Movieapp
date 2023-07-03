@@ -23,13 +23,14 @@ import { Link } from "react-router-dom"
     }, []);
 
    return(<>
-        <div className="container-fluid pt-5 container">
+        <div className="container-fluid pt-5 container bg-dark text-white">
             <div className="row px-xl-5 pb-3 container">
                 <div className="col-lg-3 col-md-6 col-sm-12 pb-1 container">
                     <div className="mb-4 container ">
                     {
                         data.map((movie, index)=>{
-                            return <img src={movie.image} className='slider'/>
+                            let url = `/detail_page/${movie.id}`
+                            return<a href={url}><img src={movie.image} className='slider'/></a> 
                         })
                     } 
                     </div>

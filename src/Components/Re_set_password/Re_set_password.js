@@ -42,25 +42,26 @@ export default function Re_set_password() {
     }
   return (
     <>
+     <div className="card mb-4 bg-dark text-white">
       <form className="col-lg-4 mt-5 " onSubmit={(e) => submit(e)}>
-      <h2 className="text" style={{textAlign:'center',color:'red'}}>Set New Password</h2>
+      <h2 className="text" style={{textAlign:'center',color:'red'}}>Reset Password</h2>
       <div className="container">
-          <label for="email" className="text" onChange={(e) => handle(e)} required><b>Email</b></label>
-          <input type="text" className="text" placeholder="Enter email" name="email"  required />
+          <label for="email" className="text" ><b>Email</b></label>
+          <input type="text" placeholder="Enter email" name="email" onChange={(e) => handle(e)} required />
         </div>
         <div className="container">
-          <label for="password" className="text" onChange={(e) => handle(e)} required><b>Old Password</b></label>
-          <input type="text" className="text" placeholder="Enter old password" name="password"  required />
+          <label for="password" className="text" ><b>Old Password</b></label>
+          <input type="password" placeholder="Enter old password" name="old_password" onChange={(e) => handle(e)}  required/>
         </div>
         <div className="container">
-          <label for="password" className="text" onChange={(e) => handle(e)} required><b>New Password</b></label>
-          <input type="text" className="text" placeholder="Enter new password" name="new-password"  required />
+          <label for="password" className="text" ><b>New Password</b></label>
+          <input type="password" placeholder="Enter new password" name="new_password" onChange={(e) => handle(e)}  required/>
         </div>
-       
-        <div className="container" style={{ backgroundColor: '#f1f1f1' }}>
-          <button type="submit" className="cancelbtn">Submit</button>
+        <div className="container">
+          <button type="submit" className=" btn btn-success">Submit</button>
         </div>
       </form>
+      </div>
     </>
   );
 }

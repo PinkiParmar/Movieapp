@@ -42,10 +42,10 @@ export default function Forgot() {
     }
   return (
     <>
-      <form className="col-lg-4 mt-5 " onSubmit={(e) => submit(e)}>
+      <form className="col-lg-4 mt-5 bg-dark text-white " onSubmit={(e) => submit(e)}>
       <h2 className="text" style={{textAlign:'center',color:'red'}}>Forgot Password</h2>
         <div className="container">
-          <label for="email" className="text" onChange={(e) => handle(e)} required><b>Email</b></label>
+          <label for="email" className="text" onChange={(e) => handle(e)} required><b>Email:</b></label>
           <input type="text" placeholder="Enter Email" name="email"  required />
         </div>
         <div className="container" style={{ backgroundColor: '#f1f1f1' }}>

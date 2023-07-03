@@ -42,8 +42,8 @@ export default function Register()
         console.log(err);
       });
   };
-  const handle=(e)=>{
-    const newdata={...data};
+  const handle = (e) => {
+    const newdata = { ...data };
     newdata[e.target.name] = e.target.value;
     setData(newdata);
     console.log(newdata);
@@ -51,7 +51,7 @@ export default function Register()
     return(
         <>
          <form onSubmit={(e)=>submit(e)}>
-  <div class="container">
+  <div class="container bg-dark text-white">
   <h2 className="text" style={{textAlign:'center',color:'red'}}>Register Here</h2>
   <div className="row">
   <div className="col-md-6 mb-4">

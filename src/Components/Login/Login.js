@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css"
 // import "bootstrap/dist/css/bootstrap.min.css";
-
 export default function Login() {
   const navigate = useNavigate();
   const [home, setHome] = useState(true);
@@ -17,7 +16,6 @@ export default function Login() {
     console.log(payload)
     axios.post("http://localhost:3003/login", payload, {
       headers: {
-
         "Content-type": "application/json",
       },
     })
@@ -45,6 +43,7 @@ export default function Login() {
   }
   return (
     <>
+    <div className="bg-dark text-white">
       <form className="col-lg-4 mt-5 " onSubmit={(e) => submit(e)}>
         <div class="imgcontainer">
           <img src="img_avtar2.png" alt="Avatar" class="avatar" />
@@ -64,6 +63,7 @@ export default function Login() {
           <span className="psw"><Link to="/forgot"> Forgot password?</Link></span>
         </div>
       </form>
+      </div>
     </>
   );
 }

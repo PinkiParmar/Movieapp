@@ -1,12 +1,7 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
 import "./Popular.css"
-import { Link } from "react-router-dom"
-
-
  export default function Popular(){
-    
     const [data, setData] = useState([]);
     const getData = async () => {
         var token=JSON.parse(localStorage.getItem('token'));
@@ -22,19 +17,22 @@ import { Link } from "react-router-dom"
       getData();
     }, []);
    return(<>
-        <div className="container-fluid pt-5 container">
+   <div className="card mb-4 bg-dark text-white">
+    
+        <div className="container-fluid pt-5 container ">
             <div className="row px-xl-5 pb-3 container">
                 <div className="col-lg-3 col-md-6 col-sm-12 pb-1 container">
                     <div className="mb-4 container ">
                     {
                         data.map((movie, index)=>{
-                            return <img src={movie.image} className='slider'/>
+                            let url = `/detail_page/${movie.id}`
+                            return<a href={url}><img src={movie.image} className='slider'/></a> 
                         })
                     } 
                     </div>
                 </div>
             </div>
-            <div className="row px-xl-5 pb-3">
+            {/* <div className="row px-xl-5 pb-3">
                 <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
                     <div className="mb-4">
                     {
@@ -46,7 +44,8 @@ import { Link } from "react-router-dom"
                     } 
                     </div>
                 </div>
-            </div>
+            </div> */}
+        </div>
         </div>
    </>);
 
